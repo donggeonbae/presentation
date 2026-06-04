@@ -28,6 +28,8 @@ Use this repository to create meeting decks, literature review decks, conference
 5. Write a speaker script.
 6. Review timing, evidence links, and visual readability.
 
+For paper-review-derived decks, start from `donggeonbae/review/templates/presentation-handoff.md` and preserve the review's logic flow from existing research to limitation, method, results, implications, and remaining gaps.
+
 ## Templates
 
 - `templates/meeting.md`

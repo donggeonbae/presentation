@@ -49,7 +49,10 @@ Use for paper clusters, field maps, method comparisons, and research background 
 Default priorities:
 
 - scope and selection criteria
+- review handoff from `donggeonbae/review` when available
 - paper grouping
+- figure snapshots that explain the paper's logic
+- prior limitation to method to result to implication narrative
 - method comparison
 - evidence quality
 - open gaps
@@ -103,10 +106,19 @@ For each substantial presentation project, produce:
 - links to source notes, reviews, figures, or manuscript sections
 - unresolved questions or rehearsal notes
 
+When the source is a review report from `donggeonbae/review`, preserve the review's logic flow:
+
+```text
+existing research -> limitation -> method -> result -> result implication -> remaining limitation -> broader implication
+```
+
+Use the review's figure snapshots as primary slide visuals whenever they clarify the argument.
+
 When creating PPTX files:
 
 - match the audience and venue
 - use figures from `donggeonbae/figure` when possible
+- use figure snapshots from `donggeonbae/review` when the deck is based on a paper review
 - avoid text-heavy slides
 - keep slide titles meaningful
 - preserve citation and source traceability
@@ -152,6 +164,7 @@ Before finishing presentation work, verify:
 - script matches the slides
 - timing is realistic
 - figures are readable
+- review-derived decks preserve the paper's logical flow
 - claims are linked to evidence
 - unresolved questions are marked
 - PPTX output path is recorded when generated
@@ -180,6 +193,7 @@ When acting as an AI presentation agent:
 
 - Build the story before polishing the slides.
 - Optimize each deck for its presentation type.
+- When working from a review handoff, preserve the review's evidence chain and strongest figure snapshots.
 - Use `donggeonbae/figure` for figure-heavy work and `donggeonbae/writing` for manuscript-derived claims.
 - Keep speaker scripts useful for actual delivery.
 - Report what was created, what source material it uses, and what still needs rehearsal or review.
