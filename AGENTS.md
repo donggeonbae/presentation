@@ -1,4 +1,4 @@
-# AGENTS.md
+﻿# AGENTS.md
 
 ## Purpose
 
@@ -6,11 +6,11 @@ This repository is for academic and research presentations. Use it to create PPT
 
 Related repositories:
 
-- `Ramblue/research`: shared research materials, source maps, reading queues, datasets, and reusable notes.
-- `Ramblue/review`: structured paper reviews, evidence extraction, critique, and talk/poster review.
-- `Ramblue/figure`: paper figures, diagrams, visual explanations, Figma assets, and image-generation workflows.
-- `Ramblue/writing`: LaTeX manuscript drafting, venue templates, citation integration, strict review loops, and submission preparation.
-- `Ramblue/presentation`: meeting decks, literature review decks, conference talks, posters, and speaker scripts.
+- `donggeonbae/research`: shared research materials, source maps, reading queues, datasets, and reusable notes.
+- `donggeonbae/review`: structured paper reviews, evidence extraction, critique, and talk/poster review.
+- `donggeonbae/figure`: paper figures, diagrams, visual explanations, Figma assets, and image-generation workflows.
+- `donggeonbae/writing`: LaTeX manuscript drafting, venue templates, citation integration, strict review loops, and submission preparation.
+- `donggeonbae/presentation`: meeting decks, literature review decks, conference talks, posters, and speaker scripts.
 
 ## Repository Role
 
@@ -26,7 +26,7 @@ Use this repository for:
 - exported PPTX files
 - poster-ready layouts
 
-Do not use this repository as the main place for raw literature collection, detailed paper critique, manuscript drafting, or figure source creation. Put those in `Ramblue/research`, `Ramblue/review`, `Ramblue/writing`, and `Ramblue/figure`.
+Do not use this repository as the main place for raw literature collection, detailed paper critique, manuscript drafting, or figure source creation. Put those in `donggeonbae/research`, `donggeonbae/review`, `donggeonbae/writing`, and `donggeonbae/figure`.
 
 ## Presentation Types
 
@@ -106,7 +106,7 @@ For each substantial presentation project, produce:
 When creating PPTX files:
 
 - match the audience and venue
-- use figures from `Ramblue/figure` when possible
+- use figures from `donggeonbae/figure` when possible
 - avoid text-heavy slides
 - keep slide titles meaningful
 - preserve citation and source traceability
@@ -156,12 +156,33 @@ Before finishing presentation work, verify:
 - unresolved questions are marked
 - PPTX output path is recorded when generated
 
+## Static HTML Archive Framework
+
+This repository follows the source-derived encrypted static HTML archive pattern adapted from `Lukael/research`.
+
+Framework files:
+
+- `index.html`: public archive index.
+- `styles/site.css`: shared dark archive styling.
+- `scripts/site.js`: discovers `projects/<slug>/` folders through the GitHub Contents API or local directory listing.
+- `scripts/decrypt-report.js`: unlocks `projects/<slug>/report.enc` in the browser using Web Crypto.
+- `scripts/encrypt-report.js`: encrypts plaintext HTML into `report.enc` using `REPORT_PASSWORD`.
+- `scripts/build-markdown-report.js`: builds a project unlock shell and optional encrypted report from Markdown.
+- `scripts/build-3dgs-ri-report.js`: source-derived example builder kept for reference; prefer `build-markdown-report.js` for new work.
+- `templates/unlock-template.html`: public password unlock shell.
+- `templates/report-template.html`: dark two-column encrypted report body template.
+- `projects/<slug>/`: public unlock shell plus encrypted payload for each protected report.
+
+Do not commit plaintext protected report bodies under `projects/`. Use `build/` for transient plaintext output and keep encrypted payloads in `projects/<slug>/report.enc` when a report should be published.
 ## Agent Behavior
 
 When acting as an AI presentation agent:
 
 - Build the story before polishing the slides.
 - Optimize each deck for its presentation type.
-- Use `Ramblue/figure` for figure-heavy work and `Ramblue/writing` for manuscript-derived claims.
+- Use `donggeonbae/figure` for figure-heavy work and `donggeonbae/writing` for manuscript-derived claims.
 - Keep speaker scripts useful for actual delivery.
 - Report what was created, what source material it uses, and what still needs rehearsal or review.
+
+
+
